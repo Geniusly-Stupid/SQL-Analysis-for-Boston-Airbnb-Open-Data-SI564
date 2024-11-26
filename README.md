@@ -47,7 +47,25 @@
 
    Tables are connected by `listing_id` to link listings with their reviews and availability.
 
-4. **Please identify any questions or concerns you have about your data set or the performance review, overall. (Optional)**
+4. **Please explain the business insights we plan to get.**
 
-   - The dataset contains many fields (for the file `listing.csv`). Is it acceptable to include only a few fields for analysis?
-   - How can I determine if it’s necessary to split a CSV file into multiple tables? (especially for the file `listing.csv`)For example, the tables  Listings, Location, Price, Reviews are all from `listing.csv`.
+   **Key Business Insights:**
+
+   1. Identify the busiest times of the year to visit Boston and analyze the extent of price surges.
+   2. Determine the most popular neighborhoods in Boston.
+   3. Highlight the top hosts and understand the factors contributing to their popularity.
+
+   **Detailed Research Problems:**
+
+   1. **Busiest Times of the Year and Price Spikes:**
+      - Identify periods when calendar prices significantly increase.
+      - Analyze the extent of calendar price hikes during peak times.
+   2. **Top Hosts Analysis:**
+      - Hosts with the most listings.
+      - Hosts generating the highest earnings.
+      - Hosts with the highest ratings.
+   3. **Neighborhood Popularity Analysis:**
+      - Neighborhoods with the highest number of reviews.
+      - Neighborhoods with the most listings over time (e.g., analyzing trends based on host activity or calendar availability).
+   4. **Neighborhood Vibes:**
+      - Use listing descriptions to assess the general vibe or character of each Boston neighborhood.
