@@ -1,0 +1,14 @@
+property_type,property_id
+House,1
+Apartment,2
+Condominium,3
+Villa,4
+Bed & Breakfast,5
+Townhouse,6
+Entire Floor,7
+Loft,8
+Guesthouse,9
+Boat,10
+Dorm,11
+Other,12
+Camper/RV,13
