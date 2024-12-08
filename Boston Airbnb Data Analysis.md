@@ -101,6 +101,48 @@ limit 10;
 
 <img src="./Boston Airbnb Data Analysis/image/image-20241208002826945.png" alt="image-20241208002826945" style="zoom:50%;" />
 
+### Average Statistics
+
+```sql
+select avg(total_listings) as avg_host_listings
+from (
+    select h.host_id, count(l.id) as total_listings
+    from host_table h
+    join listings_table l on h.host_id = l.host_id
+    group by h.host_id
+) subquery;
+```
+
+<img src="./Boston Airbnb Data Analysis/image/image-20241208013824448.png" alt="image-20241208013824448" style="zoom:67%;" />
+
+```sql
+select avg(total_earnings) as avg_host_earnings
+from (
+    select h.host_id, sum(l.price * r.number_of_reviews) as total_earnings
+    from host_table h
+    join listings_table l on h.host_id = l.host_id
+    join availability_table a on l.id = a.listing_id
+    join review_table r on l.id = r.listing_id
+    group by h.host_id
+) subquery;
+```
+
+<img src="./Boston Airbnb Data Analysis/image/image-20241208013851619.png" alt="image-20241208013851619" style="zoom:50%;" />
+
+```sql
+select avg(avg_rating) as avg_host_rating
+from (
+    select h.host_id, avg(r.review_scores_rating) as avg_rating
+    from host_table h
+    join listings_table l on h.host_id = l.host_id
+    join review_table r on l.id = r.listing_id
+    where r.review_scores_rating is not null
+    group by h.host_id
+) subquery;
+```
+
+<img src="./Boston Airbnb Data Analysis/image/image-20241208013911544.png" alt="image-20241208013911544" style="zoom:50%;" />
+
 ### Key Observation
 
 **1. Most Listings**
