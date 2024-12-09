@@ -242,6 +242,14 @@ order by rank_difference;
 
 ![image-20241209001310366](./Boston Airbnb Data Analysis/image/image-20241209001310366.png)
 
+### Average Price
+
+<img src="./Boston Airbnb Data Analysis/image/f576e29e9a9db860bc54ccb14155d42.png" alt="f576e29e9a9db860bc54ccb14155d42" style="zoom:67%;" />
+
+<img src="./Boston Airbnb Data Analysis/image/4098aa137488a1aa81ecf1497f889c2.png" alt="4098aa137488a1aa81ecf1497f889c2" style="zoom:50%;" />
+
+
+
 ### Key Observations
 
 **Table 1: Total Reviews per Neighborhood**
