@@ -323,31 +323,31 @@ order by rank_difference;
 **Answer:**
 
 Here is the list of neighborhoods with their respective average listing prices: \
-	1.	Bay Village: $266.83 \
-	2.	South Boston Waterfront: $254.90 \
-	3.	Leather District: $253.60 \
-	4.	Back Bay: $236.81 \
-	5.	Downtown: $236.46 \
-	6.	Chinatown: $232.35 \
-	7.	Beacon Hill: $211.15 \
-	8.	West End: $209.59 \
-	9.	South End: $200.37 \
-	10.	Fenway: $197.49 \
-	11.	North End: $195.67 \
-	12.	Charlestown: $189.05 \
-	13.	South Boston: $181.87 \
-	14.	Jamaica Plain: $138.48 \
-	15.	Longwood Medical Area: $138.44 \
-	16.	Roxbury: $136.61 \
-	17.	Mission Hill: $121.97 \
-	18.	East Boston: $119.15 \
-	19.	Brighton: $118.76 \
-	20.	Allston: $112.31 \
-	21.	West Roxbury: $107.11 \
-	22.	Roslindale: $98.43 \
-	23.	Dorchester: $91.63 \
-	24.	Hyde Park: $86.54 \
-	25.	Mattapan: $75.12
+ 	1.	Bay Village: $266.83
+ 	2.	South Boston Waterfront: $254.90
+ 	3.	Leather District: $253.60
+ 	4.	Back Bay: $236.81
+ 	5.	Downtown: $236.46
+ 	6.	Chinatown: $232.35 
+ 	7.	Beacon Hill: $211.15 
+ 	8.	West End: $209.59 
+ 	9.	South End: $200.37 
+ 	10.	Fenway: $197.49 
+ 	11.	North End: $195.67 
+ 	12.	Charlestown: $189.05 
+ 	13.	South Boston: $181.87 
+ 	14.	Jamaica Plain: $138.48 
+ 	15.	Longwood Medical Area: $138.44 
+ 	16.	Roxbury: $136.61 
+ 	17.	Mission Hill: $121.97 
+ 	18.	East Boston: $119.15 
+ 	19.	Brighton: $118.76 
+ 	20.	Allston: $112.31 
+ 	21.	West Roxbury: $107.11 
+ 	22.	Roslindale: $98.43 
+ 	23.	Dorchester: $91.63 
+ 	24.	Hyde Park: $86.54
+ 	25.	Mattapan: $75.12
 
 These averages are helpful in understanding the market positioning and affordability of accommodations in each neighborhood.
 
