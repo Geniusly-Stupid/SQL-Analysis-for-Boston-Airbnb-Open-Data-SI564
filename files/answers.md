@@ -1,5 +1,7 @@
 # Boston Airbnb Data Analysis - Answers
 
+[toc]
+
 ## 1. Busiest Times to Visit Boston and Price Spikes
 
 ### 1.1. What are the busiest times to visit Boston?
