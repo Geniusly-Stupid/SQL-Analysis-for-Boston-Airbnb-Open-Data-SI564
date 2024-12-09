@@ -6,7 +6,7 @@ We hope this email finds you well. We are writing to share the research question
 
 **Research Questions:**
 
-1. The busiest times of the year to visit Boston and prices spike:
+The busiest times of the year to visit Boston and prices spike:
    1. What are the busiest times to visit Boston?
    2. How much do the calendar price increases?
    3. What is the price gap between peak and off-peak months?
