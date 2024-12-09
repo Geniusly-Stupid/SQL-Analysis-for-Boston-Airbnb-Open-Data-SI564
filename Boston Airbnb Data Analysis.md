@@ -187,7 +187,57 @@ group by n.neighborhood_id, n.neighbourhood_cleansed
 order by total_listings desc;
 ```
 
-![image-20241208001946906](./Boston Airbnb Data Analysis/image/image-20241208001946906.png)
+![图片](./Boston Airbnb Data Analysis/image/图片.png)
+
+**Rank Difference**
+
+```python
+select 
+    tr.neighborhood_id,
+    tr.neighborhood_name,
+    tr.review_rank as review_rank,
+    tl.listing_rank as listing_rank,
+    tr.review_rank - tl.listing_rank as rank_difference
+from (
+    select 
+        neighborhood_id,
+        neighborhood_name,
+        total_reviews,
+        @review_rank := @review_rank + 1 as review_rank
+    from (
+        select 
+            n.neighborhood_id, 
+            n.neighbourhood_cleansed as neighborhood_name, 
+            sum(r.number_of_reviews) as total_reviews
+        from neighborhood_table n
+        join listings_table li on n.neighborhood_id = li.neighborhood_id
+        join review_table r on li.id = r.listing_id
+        group by n.neighborhood_id, n.neighbourhood_cleansed
+        order by total_reviews desc
+    ) subquery, (select @review_rank := 0) r
+) tr
+join (
+    select 
+        neighborhood_id,
+        neighborhood_name,
+        total_listings,
+        @listing_rank := @listing_rank + 1 as listing_rank
+    from (
+        select 
+            n.neighborhood_id, 
+            n.neighbourhood_cleansed as neighborhood_name, 
+            count(li.id) as total_listings
+        from neighborhood_table n
+        join listings_table li on n.neighborhood_id = li.neighborhood_id
+        group by n.neighborhood_id, n.neighbourhood_cleansed
+        order by total_listings desc
+    ) subquery, (select @listing_rank := 0) r
+) tl
+on tr.neighborhood_id = tl.neighborhood_id
+order by rank_difference;
+```
+
+![image-20241209001310366](./Boston Airbnb Data Analysis/image/image-20241209001310366.png)
 
 ### Key Observations
 
