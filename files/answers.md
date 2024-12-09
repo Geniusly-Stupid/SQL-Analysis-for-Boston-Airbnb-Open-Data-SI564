@@ -1,6 +1,8 @@
-# Boston Airbnb Data Analysis - Answers
+# Subject: Research Findings for Boston Airbnb Data Analysis
 
-[toc]
+Dear Raj,
+
+We are writing to share the research findings for Boston Airbnb data analysis. Below are the answers to the research questions we addressed:
 
 ## 1. Busiest Times to Visit Boston and Price Spikes
 
@@ -28,7 +30,7 @@ from monthly_avg_price m, annual_avg a
 order by m.month;
 ```
 
-![image-price_spike](./Boston Airbnb Data Analysis/image/Screenshot 2024-12-08 at 9.13.56 PM.png)
+![image-price_spike](./Boston Airbnb Data Analysis/image/price_spike.png)
 
 ### 1.2. How much do the calendar prices increase?
 
@@ -54,7 +56,7 @@ from monthly_avg_price m, annual_avg a
 order by m.month;
 ```
 
-![image-price_spike](./Boston Airbnb Data Analysis/image/Screenshot 2024-12-08 at 9.13.56 PM.png)
+![image-price_spike](./Boston Airbnb Data Analysis/image/price_spike.png)
 
 ### 1.3. What is the price gap between peak and off-peak months?
 
@@ -80,7 +82,8 @@ from monthly_avg_price m, annual_avg a
 order by m.month;
 ```
 
-![image-price_spike](./Boston Airbnb Data Analysis/image/Screenshot 2024-12-08 at 9.13.56 PM.png)
+![image-price_spike](./Boston Airbnb Data Analysis/image/price_spike.png)
+
 
 
 ## 2. Top Hosts
@@ -263,7 +266,7 @@ group by n.neighborhood_id, n.neighbourhood_cleansed
 order by total_listings desc;
 ```
 
-![4098aa137488a1aa81ecf1497f889c2](./answers/image/4098aa137488a1aa81ecf1497f889c2.png)
+![image-number_of_listings](./Boston Airbnb Data Analysis/image/num_of_listings.png)
 
 **Rank Difference**
 
@@ -319,31 +322,31 @@ order by rank_difference;
 
 **Answer:**
 
-Here is the list of neighborhoods with their respective average listing prices:
-	1.	Bay Village: $266.83
-	2.	South Boston Waterfront: $254.90
-	3.	Leather District: $253.60
-	4.	Back Bay: $236.81
-	5.	Downtown: $236.46
-	6.	Chinatown: $232.35
-	7.	Beacon Hill: $211.15
-	8.	West End: $209.59
-	9.	South End: $200.37
-	10.	Fenway: $197.49
-	11.	North End: $195.67
-	12.	Charlestown: $189.05
-	13.	South Boston: $181.87
-	14.	Jamaica Plain: $138.48
-	15.	Longwood Medical Area: $138.44
-	16.	Roxbury: $136.61
-	17.	Mission Hill: $121.97
-	18.	East Boston: $119.15
-	19.	Brighton: $118.76
-	20.	Allston: $112.31
-	21.	West Roxbury: $107.11
-	22.	Roslindale: $98.43
-	23.	Dorchester: $91.63
-	24.	Hyde Park: $86.54
+Here is the list of neighborhoods with their respective average listing prices: \
+	1.	Bay Village: $266.83 \
+	2.	South Boston Waterfront: $254.90 \
+	3.	Leather District: $253.60 \
+	4.	Back Bay: $236.81 \
+	5.	Downtown: $236.46 \
+	6.	Chinatown: $232.35 \
+	7.	Beacon Hill: $211.15 \
+	8.	West End: $209.59 \
+	9.	South End: $200.37 \
+	10.	Fenway: $197.49 \
+	11.	North End: $195.67 \
+	12.	Charlestown: $189.05 \
+	13.	South Boston: $181.87 \
+	14.	Jamaica Plain: $138.48 \
+	15.	Longwood Medical Area: $138.44 \
+	16.	Roxbury: $136.61 \
+	17.	Mission Hill: $121.97 \
+	18.	East Boston: $119.15 \
+	19.	Brighton: $118.76 \
+	20.	Allston: $112.31 \
+	21.	West Roxbury: $107.11 \
+	22.	Roslindale: $98.43 \
+	23.	Dorchester: $91.63 \
+	24.	Hyde Park: $86.54 \
 	25.	Mattapan: $75.12
 
 These averages are helpful in understanding the market positioning and affordability of accommodations in each neighborhood.
@@ -366,7 +369,14 @@ order by
     average_price desc;
 ```
 
-![f576e29e9a9db860bc54ccb14155d42](./answers/image/f576e29e9a9db860bc54ccb14155d42-1733768460781-3.png)
+![image-avg_price_per_nei](./Boston Airbnb Data Analysis/image/avg_price_per_nei.png)
 
 
+We are happy to discuss these findings and our insights in more detail at your convenience.
 
+
+Best regards,
+
+Zhiyi Ji, Xinyi Huang
+
+DBA Team
