@@ -226,6 +226,50 @@ order by total_listings desc;
 - **High Reviews but Lower Listings**: A neighborhood with relatively fewer listings but high review numbers like *Dochester* might indicate **business potentials**.
 - **Low Reviews and Low Listings**: Neighborhoods like *Leather District* and *Longwood Medical Area* are less active, suggesting underutilization or limited demand.
 
+## Busiest Times and Price Spikes
+
+To assess how prices spike during the busiest periods, we'll calculate the average price per month and compare it to the annual average price.
+
+```sql
+with monthly_avg_price as (
+    select 
+        extract(month from c.date) as month,
+        avg(c.price) as avg_monthly_price
+    from calendar_table c
+    group by month
+),
+annual_avg as (select avg(price) as avg_price from calendar_table)
+select 
+    m.month,
+    m.avg_monthly_price,
+    round(((m.avg_monthly_price - a.avg_price) / a.avg_price) * 100, 2) as price_spike_percentage
+from monthly_avg_price m, annual_avg a
+order by m.month;
+```
+
+![image-price_spike](./Boston Airbnb Data Analysis/image/Screenshot 2024-12-08 at 9.13.56 PM.png)
+
+
+### Key Observations
+
+#### **1. Peak Months: September and October**
+
+- **September (Month 9)** and **October (Month 10)** exhibit the highest average monthly prices at **$231.52** and **$230.27** respectively.
+- **Price Spike Percentages** for these months are **+20.78%** and **+20.12%**, indicating a substantial increase compared to the annual average.
+- **Implications:**
+  - These significant price spikes suggest a **high demand** during these months, likely driven by factors such as favorable weather, fall foliage, academic calendars, and major events in Boston.
+  - Hosts capitalize on this increased demand by raising prices, maximizing revenue during peak seasons.
+
+#### **2. Off-Peak Months: January to March**
+
+- **January (Month 1), February (Month 2), and March (Month 3)** show the lowest average monthly prices at **$178.36**, **$175.86**, and **$175.93** respectively.
+- **Price Spike Percentages** for these months are **-6.95%**, **-8.26%**, and **-8.22%**, indicating a decrease relative to the annual average.
+- **Implications:**
+  - These months represent **off-peak periods** with lower demand, possibly due to colder weather, fewer tourists, and a post-holiday slowdown.
+  - Lower prices incentivize travelers to book accommodations, providing opportunities for hosts to maintain occupancy rates despite reduced demand.
+
+
+
 ## Appendix
 
 ### All Queries
@@ -251,5 +295,22 @@ modify price float;
 alter table listings_table
 drop column availability,
 drop column availability_2;
+
+
+
+with monthly_avg_price as (
+    select 
+        extract(month from c.date) as month,
+        avg(c.price) as avg_monthly_price
+    from calendar_table c
+    group by month
+),
+annual_avg as (select avg(price) as avg_price from calendar_table)
+select 
+    m.month,
+    m.avg_monthly_price,
+    round(((m.avg_monthly_price - a.avg_price) / a.avg_price) * 100, 2) as price_spike_percentage
+from monthly_avg_price m, annual_avg a
+order by m.month;
 ```
 
