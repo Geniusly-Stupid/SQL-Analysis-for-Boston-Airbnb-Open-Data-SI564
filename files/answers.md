@@ -266,7 +266,7 @@ group by n.neighborhood_id, n.neighbourhood_cleansed
 order by total_listings desc;
 ```
 
-![image-number_of_listings](./Boston Airbnb Data Analysis/image/num_of_listings.png)
+<img src="./answers/image/4098aa137488a1aa81ecf1497f889c2-1733769735876-1.png" alt="4098aa137488a1aa81ecf1497f889c2" style="zoom:50%;" />
 
 **Rank Difference**
 
@@ -369,7 +369,7 @@ order by
     average_price desc;
 ```
 
-![image-avg_price_per_nei](./Boston Airbnb Data Analysis/image/avg_price_per_nei.png)
+<img src="./answers/image/f576e29e9a9db860bc54ccb14155d42-1733769753775-3.png" alt="f576e29e9a9db860bc54ccb14155d42" style="zoom:50%;" />
 
 
 We are happy to discuss these findings and our insights in more detail at your convenience.
