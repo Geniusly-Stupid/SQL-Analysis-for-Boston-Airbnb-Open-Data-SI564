@@ -36,9 +36,12 @@
    1. The time when the calendar price increases.
    2. How much do the calendar price increases	`
 2. What are the top hosts? (JZY)
-   1. Most Listings
-   2. Earn most
-   3. Rate Highest
+   1. Who owns the highest number of listings, and how many?
+   2. What is the average number of listings owned by a host?
+   3. Who earns the most, and how much do they earn?
+   4. What is the average earnings per host?
+   5. Who has the highest rating, and what is their score?
+   6. What is the average rating across all hosts?
 3. What is the supply and demand situation in each neighborhood? Which neighborhoods are the most popular, and which ones show potential for growth? (JZY)
    1. Neighborhoods has the most number of review
    2. Neighborhoods has the most listings
